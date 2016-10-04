@@ -1,4 +1,4 @@
-;;; find-file-at-host-with-ido.el --- specify a host for ido-find-file
+;;; find-file-at-host.el --- specify a host for ido-find-file
 
 ;; Copyright (C) 2016 NGK Sternhagen
 
@@ -14,8 +14,8 @@
 
 
 ;;;###autoload
-(defun find-file-at-host-with-ido (target-host)
-  "find file on TARGET-HOST via M-x find-file-at-host-with-ido."
+(defun find-file-at-host (target-host)
+  "find file on TARGET-HOST via M-x find-file-at-host."
   (interactive "sEnter host > ")
   (cd (format "/%s:/" target-host))
   (ido-find-file))
